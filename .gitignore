@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+
+# Quartz build artifacts (built in site/, published by CI)
+site/node_modules/
+public/
+site/public/
+site/.quartz-cache/
+
+# Obsidian local state, if the content folder is ever opened as a vault
+**/.obsidian/
