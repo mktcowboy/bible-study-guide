@@ -5,11 +5,25 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  afterBody: [
+    Component.Comments({
+      provider: "giscus",
+      options: {
+        repo: "mktcowboy/bible-study-guide",
+        repoId: "R_kgDOS16k7g",
+        category: "Announcements",
+        categoryId: "DIC_kwDOS16k7s4C-2sD",
+        mapping: "pathname",
+        strict: false,
+        reactionsEnabled: true,
+        inputPosition: "top",
+      },
+    }),
+  ],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      GitHub: "https://github.com/mktcowboy/bible-study-guide",
+      Feedback: "https://github.com/mktcowboy/bible-study-guide/discussions",
     },
   }),
 }
