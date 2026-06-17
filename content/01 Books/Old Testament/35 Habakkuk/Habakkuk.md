@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~605 BC — the oracle about Babylon rising as a judgment instrument fits the period immediately after the Battle of Carchemish (605 BC), when Babylon decisively defeated Assyria and Egypt and became the dominant Near Eastern power
 - **Key Themes:** The theodicy of divine justice, the mystery of God using a more wicked nation to judge a less wicked one, faith as the proper response to unanswered questions, the sovereignty of God over history, the final triumph of divine glory
 - **Chapters:** 3
-- **Source Text:** [[Habakkuk (KJV Source)]]
 
 ## Summary
 

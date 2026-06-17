@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~AD 62–65 — the abrupt ending (Paul under house arrest in Rome) suggests composition before his death; possibly completed before Paul's trial outcome was known
 - **Key Themes:** The Holy Spirit as the driving force of mission, the gospel's expansion from Jerusalem to Rome, the transition from Jewish to Gentile-majority church, persecution as a catalyst for growth, the continuity of Israel's story fulfilled in Jesus
 - **Chapters:** 28
-- **Source Text:** [[Acts (KJV Source)]]
 
 ## Summary
 

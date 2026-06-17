@@ -19,7 +19,6 @@ created: 2026-05-21
 - **Date Written:** ~430 BC
 - **Key Themes:** Leadership, prayer, perseverance, opposition, wall rebuilding, spiritual reform, covenant renewal
 - **Chapters:** 13
-- **Source Text:** [[Nehemiah (KJV Source)]]
 
 ## Summary
 

@@ -19,7 +19,6 @@ created: 2026-05-21
 - **Date Written:** ~1406 BC (final month before death, age 120)
 - **Key Themes:** Covenant renewal, obedience, love for God, blessings & curses, choice between life and death
 - **Chapters:** 34
-- **Source Text:** [[Deuteronomy (KJV Source)]]
 
 ## Summary
 

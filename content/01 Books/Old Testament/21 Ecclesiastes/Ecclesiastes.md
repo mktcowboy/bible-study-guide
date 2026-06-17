@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~950 BC (if Solomonic) or ~450–350 BC (if post-exilic composition in Solomon's persona); the language has late features that complicate the early date
 - **Key Themes:** The limits of human wisdom and achievement under the sun, the sovereignty of God who holds what humans cannot grasp, enjoyment as a genuine but fragile divine gift, the fear of God as the beginning and end of wisdom, judgment and accountability
 - **Chapters:** 12
-- **Source Text:** [[Ecclesiastes (KJV Source)]]
 
 ## Summary
 

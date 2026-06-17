@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~1446–1406 BC — during the wilderness period; the traditional early-date Exodus places the event c. 1446 BC (1 Kings 6:1 backward from Solomon's fourth year); late-date proponents suggest c. 1270 BC
 - **Key Themes:** Redemption from bondage, the divine name (YHWH), the Passover as the paradigm of substitutionary atonement, covenant at Sinai, the Tabernacle as the pattern of divine dwelling, Moses as mediator
 - **Chapters:** 40
-- **Source Text:** [[Exodus (KJV Source)]]
 
 ## Summary
 

@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** 520–518 BC (chs. 1–8, precisely dated); chapters 9–14 are undated and may be from a later period of Zechariah's ministry or even a later hand ("Deutero-Zechariah" is a significant scholarly debate); the NT cites both halves as authoritative
 - **Key Themes:** The rebuilding of the temple as a foretaste of God's renewed presence, eight night visions explaining God's cosmic purposes, the Branch (Messiah) as priest-king, Israel's future and the final Day of the LORD, the most detailed cluster of Messianic prophecies in the OT after Isaiah
 - **Chapters:** 14
-- **Source Text:** [[Zechariah (KJV Source)]]
 
 ## Summary
 

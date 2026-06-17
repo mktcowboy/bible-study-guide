@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~AD 60–62, written during Paul's imprisonment (Rome or Caesarea)
 - **Key Themes:** Forgiveness, reconciliation, Christian brotherhood, the gospel transforming social structures, love over coercion
 - **Chapters:** 1 (25 verses — the most personal of Paul's letters)
-- **Source Text:** [[Philemon (KJV Source)]]
 
 ## Summary
 

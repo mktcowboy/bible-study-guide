@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~AD 95–96, during the reign of Domitian (AD 81–96), who demanded emperor worship and persecuted Christians for refusing; some scholars argue an earlier Neronian date (~AD 68)
 - **Key Themes:** The sovereignty of God over history, the lordship of Christ over all earthly powers, the defeat of Satan and evil, the vindication of martyred saints, the new creation as the consummation of all things
 - **Chapters:** 22
-- **Source Text:** [[Revelation (KJV Source)]]
 
 ## Summary
 

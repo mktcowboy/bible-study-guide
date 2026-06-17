@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~760 BC if written by Jonah; some scholars propose a later date (~500 BC) based on the third-person narration and linguistic features
 - **Key Themes:** The breadth of God's mercy, prophetic reluctance and nationalism, genuine repentance, God's sovereign use of unlikely instruments, the question of whether Israel wants God's compassion extended to her enemies
 - **Chapters:** 4
-- **Source Text:** [[Jonah (KJV Source)]]
 
 ## Summary
 

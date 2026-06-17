@@ -19,7 +19,6 @@ created: 2026-05-21
 - **Date Written:** ~1000 BC
 - **Key Themes:** Transition from judges to monarchy, obedience over sacrifice, God looks at the heart, anointing, rebellion, faithfulness
 - **Chapters:** 31
-- **Source Text:** [[1 Samuel (KJV Source)]]
 
 ## Summary
 

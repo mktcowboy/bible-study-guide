@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~663–612 BC — after the fall of Thebes/No-amon (~663 BC, mentioned as past in 3:8) and before the fall of Nineveh (612 BC, which Nahum predicts)
 - **Key Themes:** The just wrath of God against unrepentant evil, the fall of Nineveh as divine judgment, God as both judge of nations and refuge for his people, the contrast between pride and trust
 - **Chapters:** 3
-- **Source Text:** [[Nahum (KJV Source)]]
 
 ## Summary
 

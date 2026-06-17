@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~605–536 BC — the book covers Daniel's career from the first deportation (605 BC) to the third year of Cyrus (536 BC); the Maccabean dating hypothesis (165 BC) rests on the assumption that predictive prophecy is impossible; the Dead Sea Scrolls confirm the text was not late-authored
 - **Key Themes:** God's sovereignty over all kingdoms, faithful witness under pressure, the succession of world empires ending in God's eternal kingdom, apocalyptic visions of the end, the Son of Man who receives universal dominion
 - **Chapters:** 12
-- **Source Text:** [[Daniel (KJV Source)]]
 
 ## Summary
 

@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~630–625 BC — during the reign of King Josiah of Judah (640–609 BC), before Josiah's reform in 621 BC; Zephaniah may have helped catalyze that reform
 - **Key Themes:** The comprehensive Day of the LORD (judgment on Judah, Jerusalem, all nations), radical judgment of religious syncretism and social injustice, the call to seek the LORD while there is time, the remnant of the humble, God rejoicing over his people
 - **Chapters:** 3
-- **Source Text:** [[Zephaniah (KJV Source)]]
 
 ## Summary
 

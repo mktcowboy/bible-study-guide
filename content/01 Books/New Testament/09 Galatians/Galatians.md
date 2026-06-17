@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~AD 48–55 (debated — possibly the earliest of Paul's letters if written to South Galatia after the first missionary journey; or mid-50s if written to North Galatia)
 - **Key Themes:** Justification by faith alone, freedom in Christ, the curse of the law, the promise to Abraham, the fruit of the Spirit, the new creation
 - **Chapters:** 6
-- **Source Text:** [[Galatians (KJV Source)]]
 
 ## Summary
 

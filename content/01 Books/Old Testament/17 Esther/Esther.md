@@ -19,7 +19,6 @@ created: 2026-05-21
 - **Date Written:** ~430 BC
 - **Key Themes:** Divine providence, courage, identity, reversal of fortune, deliverance, hidden sovereignty
 - **Chapters:** 10
-- **Source Text:** [[Esther (KJV Source)]]
 
 ## Summary
 

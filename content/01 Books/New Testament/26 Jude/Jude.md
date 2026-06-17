@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~AD 65–80 (likely before the fall of Jerusalem in AD 70)
 - **Key Themes:** Contending for the faith, false teachers, judgment on the ungodly, the mercy of God, doxology
 - **Chapters:** 1 (25 verses)
-- **Source Text:** [[Jude (KJV Source)]]
 
 ## Summary
 

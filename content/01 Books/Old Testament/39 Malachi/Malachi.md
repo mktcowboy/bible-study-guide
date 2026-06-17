@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~450–430 BC — the latest of the OT prophets; the temple is rebuilt (1:10), the governorship is established (1:8), and the same abuses Nehemiah addresses (intermarriage, neglected tithes) are present; likely contemporary with or just before Nehemiah's second term (~433 BC)
 - **Key Themes:** Covenant faithfulness when religion has become routine, the corruption of the priesthood, divorce and marriage covenant, the tithe and material devotion, the coming Day of the LORD, the forerunner Elijah, the "sun of righteousness" with healing in his wings
 - **Chapters:** 4
-- **Source Text:** [[Malachi (KJV Source)]]
 
 ## Summary
 

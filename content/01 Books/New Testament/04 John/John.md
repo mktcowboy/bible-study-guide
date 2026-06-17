@@ -19,7 +19,6 @@ created: 2026-05-21
 - **Date Written:** ~AD 85–95
 - **Key Themes:** Eternity, belief, divine identity, seven "I AM" statements, signs, light vs. darkness
 - **Chapters:** 21
-- **Source Text:** [[John (KJV Source)]]
 
 ## Summary
 

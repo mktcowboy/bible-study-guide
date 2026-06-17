@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~AD 85–95, from Ephesus
 - **Key Themes:** Fellowship with God, tests of genuine Christianity, God is light/love/life, the incarnation against Gnostic denial, victory through faith
 - **Chapters:** 5
-- **Source Text:** [[1 John (KJV Source)]]
 
 ## Summary
 

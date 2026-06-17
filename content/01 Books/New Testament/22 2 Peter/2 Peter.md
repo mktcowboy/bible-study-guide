@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~AD 64–68, from Rome — Peter's final letter, written shortly before his martyrdom
 - **Key Themes:** Growing in virtue, the inspiration and reliability of Scripture, false teachers, the certainty of the Second Coming, the Day of the Lord
 - **Chapters:** 3
-- **Source Text:** [[2 Peter (KJV Source)]]
 
 ## Summary
 

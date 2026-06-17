@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~AD 60–70 — before the destruction of the Temple (AD 70), as the Temple system is still spoken of as present
 - **Key Themes:** The superiority of Christ over everything in the Old Covenant, the priesthood of Melchizedek, the new covenant, the danger of apostasy, faith as endurance, the "hall of faith"
 - **Chapters:** 13
-- **Source Text:** [[Hebrews (KJV Source)]]
 
 ## Summary
 

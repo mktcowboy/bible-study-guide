@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~586 BC — immediately after the Babylonian destruction of Jerusalem; written in the acute aftermath of the catastrophe, possibly while the ruins were still smoldering
 - **Key Themes:** Grief as a legitimate spiritual act, the theological processing of catastrophic judgment, honest lament before God, the tension between deserved punishment and the hope of God's mercy, the *communal* nature of confession and hope
 - **Chapters:** 5
-- **Source Text:** [[Lamentations (KJV Source)]]
 
 ## Summary
 

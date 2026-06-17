@@ -19,7 +19,6 @@ created: 2026-05-21
 - **Date Written:** ~AD 55–65
 - **Key Themes:** Suffering Servant, action, secrecy, discipleship, cost of following
 - **Chapters:** 16
-- **Source Text:** [[Mark (KJV Source)]]
 
 ## Summary
 

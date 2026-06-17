@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~AD 50–51 — likely the earliest of Paul's surviving letters, written from Corinth
 - **Key Themes:** The Second Coming, holy living, comfort for the grieving, perseverance under persecution, the Day of the Lord
 - **Chapters:** 5
-- **Source Text:** [[1 Thessalonians (KJV Source)]]
 
 ## Summary
 

@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~AD 55–56, from Macedonia, after a painful visit to Corinth and the subsequent reconciliation
 - **Key Themes:** The nature of true apostolic ministry, weakness as the vehicle for God's power, the treasure in earthen vessels, reconciliation, generous giving, the defense of Paul's apostleship
 - **Chapters:** 13
-- **Source Text:** [[2 Corinthians (KJV Source)]]
 
 ## Summary
 

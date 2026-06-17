@@ -19,7 +19,6 @@ created: 2026-05-21
 - **Date Written:** During or after the exile, after the events of 586 BC and the closing release of Jehoiachin
 - **Key Themes:** Prophetic authority, covenant consequences, reform and relapse, Assyrian judgment, Babylonian exile, restrained hope
 - **Chapters:** 25
-- **Source Text:** [[2 Kings (KJV Source)]]
 
 ## Summary
 [[2 Kings]] carries the divided-kingdom story from the close of [[Elijah]]'s ministry to the destruction of [[Jerusalem]]. The book opens with [[Ahaziah and Baal-zebub]], moves through [[Elijah Taken to Heaven]] and the long miracle cycle of [[Elisha]], turns through [[Jehu's Revolution]], and then narrows toward the fates of Israel and Judah in [[Fall of Samaria]] and [[Fall of Jerusalem]].

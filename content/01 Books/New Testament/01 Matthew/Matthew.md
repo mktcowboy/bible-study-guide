@@ -19,7 +19,6 @@ created: 2026-05-21
 - **Date Written:** ~AD 50–60
 - **Key Themes:** Kingdom of heaven, fulfillment of prophecy, Jesus as Messiah/King, sermons, discipleship
 - **Chapters:** 28
-- **Source Text:** [[Matthew (KJV Source)]]
 
 ## Summary
 

@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~AD 62–64, written from Rome ("Babylon" — 5:13) before the Neronian persecution intensified
 - **Key Themes:** Suffering for righteousness, living hope through resurrection, holiness as strangers and aliens, submission to authority, Christ as the suffering example
 - **Chapters:** 5
-- **Source Text:** [[1 Peter (KJV Source)]]
 
 ## Summary
 

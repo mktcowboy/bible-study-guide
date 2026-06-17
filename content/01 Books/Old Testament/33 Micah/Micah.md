@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~735–700 BC — during the reigns of Jotham, Ahaz, and Hezekiah (1:1); a contemporary of [[Isaiah]] and [[Hosea]]
 - **Key Themes:** Social justice for the oppressed poor, the corruption of religious and political leadership, the Bethlehem Messiah, the universal reign of God from Zion, the incomparable mercy of God
 - **Chapters:** 7
-- **Source Text:** [[Micah (KJV Source)]]
 
 ## Summary
 

@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~593–571 BC — the most precisely dated prophetic book in the OT; 14 dates are given in the text, spanning 22 years
 - **Key Themes:** The mobile glory of God (not confined to any building), idolatry as spiritual adultery, individual moral accountability, the new covenant (heart of flesh), the dry bones resurrection, the eschatological return of God's glory, the new temple and the river of life
 - **Chapters:** 48
-- **Source Text:** [[Ezekiel (KJV Source)]]
 
 ## Summary
 

@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~450–400 BC — post-exilic; the community has returned from Babylon but is rebuilding both physically and spiritually; Chronicles retells the monarchy not as political history but as theological covenant memory
 - **Key Themes:** Genealogical identity (where do we belong in God's story?), David as the model worship-organizing king, the Levitical order as central to national life, the temple as the theological center of Israel's existence, divine retribution and mercy
 - **Chapters:** 29
-- **Source Text:** [[1 Chronicles (KJV Source)]]
 
 ## Summary
 

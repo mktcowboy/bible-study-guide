@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~AD 62–65, written from Macedonia or Corinth after Paul's release from first Roman imprisonment
 - **Key Themes:** Sound doctrine producing good works, church order, elder qualifications, rebuking false teachers, grace-motivated holiness
 - **Chapters:** 3
-- **Source Text:** [[Titus (KJV Source)]]
 
 ## Summary
 

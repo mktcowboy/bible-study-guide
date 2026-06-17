@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~AD 85–95, from Ephesus
 - **Key Themes:** Hospitality, walking in truth, pride vs. humility, Christlike character
 - **Chapters:** 1 (15 verses — the shortest book in the New Testament by verse count)
-- **Source Text:** [[3 John (KJV Source)]]
 
 ## Summary
 

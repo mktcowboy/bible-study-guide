@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~740–681 BC — Isaiah's ministry spans the reigns of Uzziah, Jotham, Ahaz, and Hezekiah; the later chapters address the Babylonian exile (which Isaiah predicted) from God's perspective
 - **Key Themes:** The Holy One of Israel, the remnant theology, the Servant of the LORD, universal salvation through a Davidic deliverer, the new exodus, the new creation
 - **Chapters:** 66
-- **Source Text:** [[Isaiah (KJV Source)]]
 
 ## Summary
 

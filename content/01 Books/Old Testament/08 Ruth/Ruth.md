@@ -19,7 +19,6 @@ created: 2026-05-21
 - **Date Written:** ~1050 BC (during the time of the judges, set in that era)
 - **Key Themes:** Redemption, providence, loyalty (hesed), kinsman-redeemer, divine timing, grace to the foreigner
 - **Chapters:** 4
-- **Source Text:** [[Ruth (KJV Source)]]
 
 ## Summary
 

@@ -19,7 +19,6 @@ created: 2026-05-21
 - **Date Written:** ~1446–1406 BC (wilderness period)
 - **Key Themes:** Rebellion, judgment, grace, divine provision, wilderness wandering, covenant faithfulness
 - **Chapters:** 36
-- **Source Text:** [[Numbers (KJV Source)]]
 
 ## Summary
 

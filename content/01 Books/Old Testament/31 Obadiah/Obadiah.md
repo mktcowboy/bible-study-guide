@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~586 BC — the description of Edom gloating over Jerusalem's fall (vv. 10–14) fits the Babylonian destruction of Jerusalem; possibly the most immediately post-587 BC prophetic text in the OT
 - **Key Themes:** Divine judgment on pride, the sin of betrayal between brothers, the Day of the LORD as universal reckoning, the principle of divine reciprocity ("as thou hast done, so shall it be done"), the restoration of Israel
 - **Chapters:** 1
-- **Source Text:** [[Obadiah (KJV Source)]]
 
 ## Summary
 

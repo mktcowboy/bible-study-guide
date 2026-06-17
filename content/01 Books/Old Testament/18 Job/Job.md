@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** Uncertain — the events are patriarchal (Job's wealth measured in livestock, sacrifices offered by the patriarch, longevity of 140+ years post-trial); the literary composition may be later; possibly the oldest book in the Bible in terms of setting
 - **Key Themes:** Suffering that is not punishment, the limits of retributive theology, God's transcendence over human understanding, innocent suffering pointing forward to Christ, the inadequacy of religious explanation versus the sufficiency of divine presence
 - **Chapters:** 42
-- **Source Text:** [[Job (KJV Source)]]
 
 ## Summary
 

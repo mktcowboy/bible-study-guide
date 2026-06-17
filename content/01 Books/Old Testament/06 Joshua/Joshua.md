@@ -19,7 +19,6 @@ created: 2026-05-21
 - **Date Written:** ~1400s BC
 - **Key Themes:** Conquest, covenant faithfulness, divine warfare, rest, obedience, land distribution
 - **Chapters:** 24
-- **Source Text:** [[Joshua (KJV Source)]]
 
 ## Summary
 

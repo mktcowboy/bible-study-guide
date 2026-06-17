@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~AD 60–62, written during Paul's Roman imprisonment
 - **Key Themes:** The supremacy and sufficiency of Christ, the Colossian heresy, fullness in Christ, the new life, household ethics
 - **Chapters:** 4
-- **Source Text:** [[Colossians (KJV Source)]]
 
 ## Summary
 

@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~AD 50–51, from Corinth — shortly after 1 Thessalonians
 - **Key Themes:** The Day of the Lord, the man of lawlessness, standing firm under persecution, diligent work, apostolic authority
 - **Chapters:** 3
-- **Source Text:** [[2 Thessalonians (KJV Source)]]
 
 ## Summary
 

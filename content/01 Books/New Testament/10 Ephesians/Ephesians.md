@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~AD 60–62, from Rome during Paul's first imprisonment
 - **Key Themes:** The church as the body and bride of Christ, spiritual blessings in heavenly places, the mystery of Jew-Gentile unity, the armor of God, marriage as a picture of Christ and the church
 - **Chapters:** 6
-- **Source Text:** [[Ephesians (KJV Source)]]
 
 ## Summary
 

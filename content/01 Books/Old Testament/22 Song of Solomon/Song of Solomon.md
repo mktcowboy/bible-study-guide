@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~950 BC (Solomonic era) — if by Solomon; some scholars date a later compilation of older love poetry
 - **Key Themes:** The goodness and beauty of human love within the covenant of marriage, desire as God's gift, the exclusivity of committed love, beauty and embodied creation as gifts, the allegorical dimension of God's love for Israel and Christ's love for the church
 - **Chapters:** 8
-- **Source Text:** [[Song of Solomon (KJV Source)]]
 
 ## Summary
 

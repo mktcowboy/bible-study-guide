@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~AD 45–50 — possibly the earliest NT letter written
 - **Key Themes:** Practical wisdom, faith and works, trials producing patience, the tongue, the wisdom from above, prayer, care for the poor
 - **Chapters:** 5
-- **Source Text:** [[James (KJV Source)]]
 
 ## Summary
 

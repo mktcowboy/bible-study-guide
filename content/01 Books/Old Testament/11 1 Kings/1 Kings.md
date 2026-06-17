@@ -19,7 +19,6 @@ created: 2026-05-21
 - **Date Written:** After the division of the kingdom and before the exile, traditionally within the Deuteronomistic history
 - **Key Themes:** Wisdom, temple worship, covenant faithfulness, royal failure, divided kingdom, prophetic confrontation
 - **Chapters:** 22
-- **Source Text:** [[1 Kings (KJV Source)]]
 
 ## Summary
 [[1 Kings]] begins with the transfer of power from [[David]] to [[Solomon]], rises to the high point of the temple in [[Jerusalem]], and then descends into fracture, idolatry, and prophetic judgment. The book moves from [[Solomon's Succession]] and [[Solomon's Wisdom]] through [[Temple Construction]] and [[Temple Dedication]], then breaks open through [[Solomon's Downfall]], [[Division of the Kingdom]], [[Jeroboam's Golden Calves]], and the fiery ministry of [[Elijah]] against [[Ahab]] and [[Jezebel]].

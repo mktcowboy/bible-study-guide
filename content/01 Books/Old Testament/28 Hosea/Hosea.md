@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~753–722 BC — the longest prophetic ministry in the minor prophets; spanning the reigns of Uzziah, Jotham, Ahaz, and Hezekiah in Judah, and Jeroboam II through Hoshea in Israel; concluded with the Assyrian exile (722 BC)
 - **Key Themes:** God's covenant love (*hesed*) for an unfaithful people, marriage as a metaphor for the God-Israel relationship, the tragedy of spiritual adultery (Baal worship), judgment as discipline not rejection, the promise of a new betrothal and restoration
 - **Chapters:** 14
-- **Source Text:** [[Hosea (KJV Source)]]
 
 ## Summary
 

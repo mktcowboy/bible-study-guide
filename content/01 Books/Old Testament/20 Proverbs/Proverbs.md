@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~950–700 BC — Solomon composed the core (~950 BC); Hezekiah's scribes copied and assembled additional material (~700 BC)
 - **Key Themes:** The fear of the LORD as the foundation of all wisdom, the two-ways contrast (wisdom vs. folly, life vs. death), wisdom as a way of life not merely information, the practical dimensions of integrity — speech, money, work, marriage, leadership
 - **Chapters:** 31
-- **Source Text:** [[Proverbs (KJV Source)]]
 
 ## Summary
 

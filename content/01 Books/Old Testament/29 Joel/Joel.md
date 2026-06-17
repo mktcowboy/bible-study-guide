@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** Disputed — two main positions: ~835 BC (early, during Joash's reign — fits the absence of Assyria/Babylon references and the prominence of Judah's priests) or ~400 BC (post-exilic — fits the diaspora reference in 3:2 and the absence of a king); the early date has stronger internal support
 - **Key Themes:** The Day of the LORD as both judgment and salvation, the locust plague as divine warning, genuine repentance, the outpouring of the Holy Spirit on all flesh, the final judgment of the nations
 - **Chapters:** 3
-- **Source Text:** [[Joel (KJV Source)]]
 
 ## Summary
 

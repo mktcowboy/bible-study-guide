@@ -19,7 +19,6 @@ created: 2026-05-21
 - **Date Written:** ~970 BC
 - **Key Themes:** David's reign, the [[Davidic Covenant]], sin and consequences, divine mercy, rebellion, covenant kingship
 - **Chapters:** 24
-- **Source Text:** [[2 Samuel (KJV Source)]]
 
 ## Summary
 

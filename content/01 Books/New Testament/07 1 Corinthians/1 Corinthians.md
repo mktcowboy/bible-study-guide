@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~AD 53–55, from Ephesus during Paul's third missionary journey
 - **Key Themes:** Unity in the body, the wisdom of the cross, sexual ethics, the Lord's Supper, spiritual gifts, the love chapter, the resurrection
 - **Chapters:** 16
-- **Source Text:** [[1 Corinthians (KJV Source)]]
 
 ## Summary
 

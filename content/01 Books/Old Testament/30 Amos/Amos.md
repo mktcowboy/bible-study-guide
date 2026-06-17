@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~760–750 BC — during the reign of Uzziah of Judah and Jeroboam II of Israel; "two years before the earthquake" (1:1), a seismic event confirmed by archaeology (~760 BC at Hazor)
 - **Key Themes:** Social justice for the poor, the hollowness of worship divorced from ethics, the coming Day of the LORD as judgment (not celebration), the remnant and Davidic restoration, God's sovereign rule over all nations
 - **Chapters:** 9
-- **Source Text:** [[Amos (KJV Source)]]
 
 ## Summary
 

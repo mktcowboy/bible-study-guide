@@ -19,7 +19,6 @@ created: 2026-05-21
 - **Date Written:** ~627–586 BC (23 years ministry, through fall of Jerusalem)
 - **Key Themes:** Judgment, new covenant, repentance, false prophets, suffering, hope, exile
 - **Chapters:** 52
-- **Source Text:** [[Jeremiah (KJV Source)]]
 
 ## Summary
 

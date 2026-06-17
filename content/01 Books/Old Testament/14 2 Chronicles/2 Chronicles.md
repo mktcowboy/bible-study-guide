@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~450–400 BC — compiled and written in the post-exilic period, likely during or after Ezra's ministry
 - **Key Themes:** The centrality of temple worship to the health of the nation, the Davidic covenant and its continuity through Judah's kings, the principle that humble seeking of God brings restoration, the faithfulness of God even through judgment to exile and beyond
 - **Chapters:** 36
-- **Source Text:** [[2 Chronicles (KJV Source)]]
 
 ## Summary
 

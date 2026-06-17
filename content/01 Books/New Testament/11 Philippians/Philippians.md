@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~AD 60–62, from Roman imprisonment
 - **Key Themes:** Joy in all circumstances, the humility and exaltation of Christ, unity in the church, contentment, pressing toward the goal
 - **Chapters:** 4
-- **Source Text:** [[Philippians (KJV Source)]]
 
 ## Summary
 

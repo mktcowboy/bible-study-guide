@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~AD 85–95, from Ephesus
 - **Key Themes:** Truth and love, discernment in hospitality, guarding against false teachers, abiding in Christ's doctrine
 - **Chapters:** 1 (13 verses)
-- **Source Text:** [[2 John (KJV Source)]]
 
 ## Summary
 

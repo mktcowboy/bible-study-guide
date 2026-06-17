@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~AD 62–65, written from Macedonia after Paul's release from his first Roman imprisonment
 - **Key Themes:** Sound doctrine, church order, leadership qualifications, false teaching, pastoral responsibility, contentment
 - **Chapters:** 6
-- **Source Text:** [[1 Timothy (KJV Source)]]
 
 ## Summary
 

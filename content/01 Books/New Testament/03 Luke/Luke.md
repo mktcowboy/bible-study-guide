@@ -19,7 +19,6 @@ created: 2026-05-21
 - **Date Written:** ~AD 58–62
 - **Key Themes:** Jesus as Savior of all, compassion, outcasts, Holy Spirit, prayer, joy
 - **Chapters:** 24
-- **Source Text:** [[Luke (KJV Source)]]
 
 ## Summary
 

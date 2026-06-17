@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~1400–400 BC — spanning the entire OT period from Moses to the post-exilic restoration; the final compilation was likely completed in the Persian period (~400 BC); the Psalter is therefore a 1,000-year anthology
 - **Key Themes:** The full range of human experience before God; honest lament as prayer; the messianic king; Torah as delight; Zion as God's dwelling; the universal praise of all creation; death and resurrection hope
 - **Chapters:** 150
-- **Source Text:** [[Psalms (KJV Source)]]
 
 ## Summary
 

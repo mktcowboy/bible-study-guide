@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~AD 67–68 — Paul's final letter, written from a Roman prison cell during his second imprisonment, shortly before his execution under Nero
 - **Key Themes:** Endurance in suffering, the sufficiency and inspiration of Scripture, preaching the Word, guarding the deposit, the loneliness of faithful ministry, Paul's farewell
 - **Chapters:** 4
-- **Source Text:** [[2 Timothy (KJV Source)]]
 
 ## Summary
 

@@ -19,7 +19,6 @@ created: 2026-05-21
 - **Date Written:** ~1050 BC (before the monarchy, after the conquest)
 - **Key Themes:** Apostasy, oppression, deliverance, cycle of sin, divine patience, moral decline
 - **Chapters:** 21
-- **Source Text:** [[Judges (KJV Source)]]
 
 ## Summary
 

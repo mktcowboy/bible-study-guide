@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** 520 BC — precisely dated in the text to the second year of Darius (1:1; 2:1, 10, 20); the most precisely dated prophetic book in the OT, with four discrete messages all delivered within four months (August–December 520 BC)
 - **Key Themes:** Misplaced priorities and their consequences, the call to rebuild the temple, divine presence as the source of true blessing, the shaking of heaven and earth, Zerubbabel as the Messianic signet ring
 - **Chapters:** 2
-- **Source Text:** [[Haggai (KJV Source)]]
 
 ## Summary
 

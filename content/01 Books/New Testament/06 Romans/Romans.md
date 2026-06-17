@@ -19,7 +19,6 @@ created: 2026-05-27
 - **Date Written:** ~AD 57, from Corinth, during Paul's third missionary journey
 - **Key Themes:** The righteousness of God, justification by faith, sin and grace, life in the Spirit, Israel's future, Christian ethics
 - **Chapters:** 16
-- **Source Text:** [[Romans (KJV Source)]]
 
 ## Summary
 
