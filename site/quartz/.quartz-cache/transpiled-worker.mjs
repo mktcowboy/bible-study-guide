@@ -13656,8 +13656,43 @@ var Breadcrumbs_default = /* @__PURE__ */ __name(((opts) => {
   return Breadcrumbs;
 }), "default");
 
+// quartz/components/scripts/comments.inline.ts
+var comments_inline_default = "";
+
 // quartz/components/Comments.tsx
 import { Fragment as Fragment5, jsx as jsx34 } from "preact/jsx-runtime";
+function boolToStringBool(b) {
+  return b ? "1" : "0";
+}
+__name(boolToStringBool, "boolToStringBool");
+var Comments_default = /* @__PURE__ */ __name(((opts) => {
+  const Comments = /* @__PURE__ */ __name(({ displayClass, fileData, cfg }) => {
+    const disableComment = typeof fileData.frontmatter?.comments !== "undefined" && (!fileData.frontmatter?.comments || fileData.frontmatter?.comments === "false");
+    if (disableComment) {
+      return /* @__PURE__ */ jsx34(Fragment5, {});
+    }
+    return /* @__PURE__ */ jsx34(
+      "div",
+      {
+        class: classNames(displayClass, "giscus"),
+        "data-repo": opts.options.repo,
+        "data-repo-id": opts.options.repoId,
+        "data-category": opts.options.category,
+        "data-category-id": opts.options.categoryId,
+        "data-mapping": opts.options.mapping ?? "url",
+        "data-strict": boolToStringBool(opts.options.strict ?? true),
+        "data-reactions-enabled": boolToStringBool(opts.options.reactionsEnabled ?? true),
+        "data-input-position": opts.options.inputPosition ?? "bottom",
+        "data-light-theme": opts.options.lightTheme ?? "light",
+        "data-dark-theme": opts.options.darkTheme ?? "dark",
+        "data-theme-url": opts.options.themeUrl ?? `https://${cfg.baseUrl ?? "example.com"}/static/giscus`,
+        "data-lang": opts.options.lang ?? "en"
+      }
+    );
+  }, "Comments");
+  Comments.afterDOMLoaded = comments_inline_default;
+  return Comments;
+}), "default");
 
 // quartz/components/Flex.tsx
 import { jsx as jsx35 } from "preact/jsx-runtime";
@@ -13718,11 +13753,25 @@ var ConditionalRender_default = /* @__PURE__ */ __name(((config2) => {
 var sharedPageComponents = {
   head: Head_default(),
   header: [],
-  afterBody: [],
+  afterBody: [
+    Comments_default({
+      provider: "giscus",
+      options: {
+        repo: "mktcowboy/bible-study-guide",
+        repoId: "R_kgDOS16k7g",
+        category: "Announcements",
+        categoryId: "DIC_kwDOS16k7s4C-2sD",
+        mapping: "pathname",
+        strict: false,
+        reactionsEnabled: true,
+        inputPosition: "top"
+      }
+    })
+  ],
   footer: Footer_default({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t"
+      GitHub: "https://github.com/mktcowboy/bible-study-guide",
+      Feedback: "https://github.com/mktcowboy/bible-study-guide/discussions"
     }
   })
 };
