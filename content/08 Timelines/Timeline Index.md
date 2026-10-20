@@ -17,7 +17,7 @@ This folder gathers broad chronological guides for reading the canon, the prophe
 - [[Intertestamental Period]] - From Persian restoration to Roman Judea
 
 ## Related Hubs
-- [[Index]]
+- [[index|Index]]
 - [[The Covenant]]
 - [[The Kingdom of God]]
 - [[Prophecy and Fulfillment]]

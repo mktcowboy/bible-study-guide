@@ -19,7 +19,7 @@ The Flood established the archetype: universal human corruption meets universal 
 - [[The Flood]] — universal divine judgment on human wickedness; the Noahic remnant preserved
 - [[Tower of Babel]] — judgment by scattering on unified human rebellion
 - [[Ten Plagues]] — judgment on Egypt; Pharaoh's hardened heart meets God's hardened hand
-- [[The Day of the Lord]] — the OT prophetic horizon; God's climactic intervention against sin
+- [[The Day of the LORD]] — the OT prophetic horizon; God's climactic intervention against sin
 - [[Day of Wrath (Zephaniah)]] — Zephaniah's concentrated portrait of the coming day of divine reckoning
 - [[Day of the LORD on All Nations]] — Obadiah and the prophets extend judgment beyond Israel to all nations
 - [[The Seven Seals]] — Revelation's sequence of divine judgments unleashed upon the earth

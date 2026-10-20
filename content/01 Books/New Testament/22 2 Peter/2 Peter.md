@@ -53,7 +53,7 @@ The letter has three distinct movements corresponding to its three chapters.
 | Eyewitness of the Transfiguration | 1:16–18 | "We were eyewitnesses of his majesty"; God's voice heard |
 | Scripture's divine origin | 1:19–21 | "Prophecy came not by will of man; holy men moved by the Spirit" |
 | [[False Teachers and Their Destruction]] | 2:1–22 | Three OT examples; character profile; "wells without water"; dog returns to vomit |
-| [[The Day of the Lord]] | 3:3–13 | Mockers answered; God's relationship to time; longsuffering; thief in the night; new heavens and earth |
+| [[The Day of the LORD]] | 3:3–13 | Mockers answered; God's relationship to time; longsuffering; thief in the night; new heavens and earth |
 | Paul's letters called Scripture | 3:15–16 | Paul's wisdom; "as also in all his epistles… as other scriptures" |
 
 ## Chapter Outline
