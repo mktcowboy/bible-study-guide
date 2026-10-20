@@ -2,6 +2,12 @@
 
 A published, fully interlinked Bible study vault — 1,139 notes covering all 66 canonical books (KJV), plus people, places, events, themes, and timelines. Authored in [Obsidian](https://obsidian.md) and published as a static site with [Quartz 4](https://quartz.jzhao.xyz/).
 
+## Last updated
+
+**October 19, 2026** · 1,139 notes
+
+Latest changes: added the Words of Christ hub (2,029 red-letter sayings), gave the Father, Son, and Holy Spirit their own Holy Trinity folder, and highlighted Christ's words inline in the New Testament KJV source text.
+
 ## Live site
 
 https://mktcowboy.github.io/bible-study-guide/
