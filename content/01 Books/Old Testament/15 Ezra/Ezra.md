@@ -19,6 +19,7 @@ created: 2026-05-21
 - **Date Written:** ~430 BC
 - **Key Themes:** Return from exile, temple rebuilding, divine providence, spiritual renewal, separation from idolatry, Law
 - **Chapters:** 10
+- **Source Text:** [[Ezra (KJV Source)]]
 
 ## Summary
 

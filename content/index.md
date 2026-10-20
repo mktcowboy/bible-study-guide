@@ -11,6 +11,7 @@ title: Holy Bible - Obsidian Study Guide
 - [[Genesis]] - start at the front of the canon
 - [[Matthew]] - jump to the New Testament
 - [[Revelation]] - judgment, victory, and new creation
+- [[Words of Christ]] - every red-letter saying of Jesus, by book
 
 ## Old Testament
 
@@ -76,7 +77,6 @@ title: Holy Bible - Obsidian Study Guide
 
 - [[The Covenant]]
 - [[Covenant Faithfulness]]
-- [[The Holy Spirit]]
 - [[The Law and Grace]]
 - [[The Church]]
 - [[The Kingdom of God]]
@@ -127,8 +127,9 @@ title: Holy Bible - Obsidian Study Guide
 - Places: `Bible/03 Places`
 - Events: `Bible/04 Events`
 - Themes: `Bible/05 Themes`
-- Timelines: `Bible/08 Timelines`
+- Quotes: `Bible/06 Quotes` — see [[Words of Christ]]; his 2,029 sayings are highlighted inline in `Bible/07 Source Text`, not duplicated into separate notes
 - Source Text: `Bible/07 Source Text`
+- Timelines: `Bible/08 Timelines`
 
 ## Progress
 
@@ -136,4 +137,4 @@ title: Holy Bible - Obsidian Study Guide
 ✅ Full deep-content coverage: 66 / 66  
 ✅ Direct book-note link audit: 66 / 66
 
-**Status: ✅ Complete.** All 66 canonical books have a book note, full KJV source text, and deep companion notes (people, places, events, themes). The link backlog is closed — all remaining unresolved wikilink targets are intentional (scripture refs + generic nouns). Counts: 66 books, 367 people notes, 156 places, 435 events, 42 themes, 5 timelines (1,065 study notes total).
+**Status: ✅ Complete.** All 66 canonical books have a book note, full KJV source text, and deep companion notes (people, places, events, themes, quotes). The link backlog is closed — all remaining unresolved wikilink targets are intentional (scripture refs + generic nouns). Counts: 66 books, 368 people notes (including the Father, Son, and Holy Spirit in [[Holy Trinity]]), 156 places, 435 events, 41 themes, 1 quotes hub (2,029 red-letter verses highlighted inline), 5 timelines (1,066 study notes total).

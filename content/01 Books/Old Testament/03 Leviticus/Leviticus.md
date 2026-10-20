@@ -19,6 +19,7 @@ created: 2026-05-21
 - **Date Written:** ~1446 BC (year after Exodus, at Sinai)
 - **Key Themes:** Holiness, sacrifice, priesthood, atonement, worship, cleanliness, feast days
 - **Chapters:** 27
+- **Source Text:** [[Leviticus (KJV Source)]]
 
 ## Summary
 

@@ -1,3 +1,13 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+// Red-letter text: ==highlights== in the source notes mark the words of Christ
+.text-highlight {
+  background-color: transparent;
+  color: #b3261e;
+}
+
+:root[saved-theme="dark"] .text-highlight {
+  color: #ff8a80;
+}

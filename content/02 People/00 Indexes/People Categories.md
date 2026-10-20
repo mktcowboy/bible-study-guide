@@ -11,6 +11,7 @@ tags: [people, israel]
 Topical hub notes for the main people folders in this vault. The people section uses category-first browsing, with one primary file home per person or people group and index notes for cross-cutting study paths.
 
 ## Categories
+- [[Holy Trinity]] - Father and Son, `Bible/02 People/01 Holy Trinity/`
 - [[Apostles]]
 - [[Early Church]]
 - [[Gospel Figures]]

@@ -19,6 +19,7 @@ created: 2026-05-21
 - **Date Written:** ~1400s BC
 - **Key Themes:** Conquest, covenant faithfulness, divine warfare, rest, obedience, land distribution
 - **Chapters:** 24
+- **Source Text:** [[Joshua (KJV Source)]]
 
 ## Summary
 
@@ -47,27 +48,27 @@ Joshua is a book of fulfillment — the promises made in Genesis are now being r
 
 ## Key Events
 
-| Event | Reference | Description |
-|-------|-----------|-------------|
-| [[Death of Moses]] | Deuteronomy 34 | Moses dies on Mount Nebo, Joshua succeeds him |
-| [[Commissioning of Joshua]] | Joshua 1 | God commands Joshua to be strong and courageous |
-| [[Spies Sent to Jericho]] | Joshua 2 | Two spies hidden by Rahab in Jericho |
-| [[Crossing the Jordan]] | Joshua 3–4 | Israel crosses on dry ground as Ark leads |
-| [[Fall of Jericho]] | Joshua 6 | Walls fall after marching seven days |
-| [[Sin of Achan]] | Joshua 7 | Israel defeated at Ai due to Achan's theft |
-| [[Battle of Ai]] | Joshua 8 | Victory after Achan's judgment, covenant renewed |
-| [[Renewal at Gilgal]] | Joshua 5 | Circumcision, Passover, manna ceases |
-| [[Gibeonite Deception]] | Joshua 9 | Gibeonites trick Israel into a treaty |
-| [[Battle of Gibeon]] | Joshua 10 | Sun stands still, great victory |
-| [[Southern Campaign]] | Joshua 10 | Five kings defeated, southern Canaan conquered |
-| [[Northern Campaign]] | Joshua 11 | Jabin of Hazor defeated, northern Canaan conquered |
-| [[Division of the Land]] | Joshua 13–21 | Territory allotted by lot among the tribes |
-| [[Cities of Refuge]] | Joshua 20 | Six cities appointed for accidental manslaughter |
-| [[Levitical Cities]] | Joshua 21 | 48 cities given to the [[Levites]] |
-| [[Eastern Tribes Return]] | Joshua 22 | Reuben, Gad, Manasseh cross back with altar controversy |
-| [[Covenant Renewal at Shechem]] | Joshua 24 | "As for me and my house, we will serve the LORD" |
-| [[Death of Joshua]] | Joshua 24:29–31 | Dies at 110, buried at Timnathserah |
-| [[Death of Eleazar]] | Joshua 24:33 | High priest dies, buried in the hill country of Ephraim |
+| Event                           | Reference       | Description                                             |
+| ------------------------------- | --------------- | ------------------------------------------------------- |
+| [[Death of Moses]]              | Deuteronomy 34  | Moses dies on Mount Nebo, Joshua succeeds him           |
+| [[Commissioning of Joshua]]     | Joshua 1        | God commands Joshua to be strong and courageous         |
+| [[Spies Sent to Jericho]]       | Joshua 2        | Two spies hidden by Rahab in Jericho                    |
+| [[Crossing the Jordan]]         | Joshua 3–4      | Israel crosses on dry ground as Ark leads               |
+| [[Fall of Jericho]]             | Joshua 6        | Walls fall after marching seven days                    |
+| [[Sin of Achan]]                | Joshua 7        | Israel defeated at Ai due to Achan's theft              |
+| [[Battle of Ai]]                | Joshua 8        | Victory after Achan's judgment, covenant renewed        |
+| [[Renewal at Gilgal]]           | Joshua 5        | Circumcision, Passover, manna ceases                    |
+| [[Gibeonite Deception]]         | Joshua 9        | Gibeonites trick Israel into a treaty                   |
+| [[Battle of Gibeon]]            | Joshua 10       | Sun stands still, great victory                         |
+| [[Southern Campaign]]           | Joshua 10       | Five kings defeated, southern Canaan conquered          |
+| [[Northern Campaign]]           | Joshua 11       | Jabin of Hazor defeated, northern Canaan conquered      |
+| [[Division of the Land]]        | Joshua 13–21    | Territory allotted by lot among the tribes              |
+| [[Cities of Refuge]]            | Joshua 20       | Six cities appointed for accidental manslaughter        |
+| [[Levitical Cities]]            | Joshua 21       | 48 cities given to the [[Levites]]                      |
+| [[Eastern Tribes Return]]       | Joshua 22       | Reuben, Gad, Manasseh cross back with altar controversy |
+| [[Covenant Renewal at Shechem]] | Joshua 24       | "As for me and my house, we will serve the LORD"        |
+| [[Death of Joshua]]             | Joshua 24:29–31 | Dies at 110, buried at Timnathserah                     |
+| [[Death of Eleazar]]            | Joshua 24:33    | High priest dies, buried in the hill country of Ephraim |
 
 ## Important Places
 
