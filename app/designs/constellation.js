@@ -1,4 +1,4 @@
-// Constellation: the graph as a night sky (dark) or a fading dawn sky (light).
+// Constellation: the graph as a night sky (dark) or ink on parchment (light).
 // Stars are pre-rendered sprites (glow, core, sparkle) cached by color + theme + size bucket.
 (() => {
   "use strict";
@@ -33,28 +33,31 @@
     radial-gradient(ellipse 120% 95% at 50% 45%, #0e1834 0%, #070b18 48%, #020308 100%) #04060d;
 }
 :root[data-design="constellation"][data-theme="light"] {
-  --bg: #eef0f4;
-  --bg-glow: #fbf4ec;
-  --panel: rgba(252, 250, 247, 0.86);
-  --panel-solid: #fcfaf7;
-  --line: rgba(40, 50, 75, 0.12);
-  --link-edge: rgba(60, 80, 120, 0.07);
-  --link-dim: rgba(60, 80, 120, 0.02);
-  --link-hi: rgba(182, 122, 28, 0.72);
-  --c-books: #b07d0e;
-  --c-people: #3369cf;
-  --c-places: #1d8c63;
-  --c-events: #cf5530;
-  --c-themes: #7c4fcf;
-  --c-quotes: #cc2a3d;
-  --c-source: #6a7488;
-  --c-timelines: #11868f;
-  --c-home: #24211b;
+  --bg: #f3ecdd;
+  --bg-glow: #fbf7ee;
+  --panel: rgba(253, 250, 243, 0.9);
+  --panel-solid: #fdfaf3;
+  --text: #2a241b;
+  --muted: #6d6252;
+  --faint: #a0947f;
+  --line: rgba(70, 55, 30, 0.14);
+  --accent: #96690c;
+  --link-edge: rgba(92, 72, 40, 0.085);
+  --link-dim: rgba(92, 72, 40, 0.035);
+  --link-hi: rgba(150, 105, 12, 0.8);
+  --c-books: #a8790f;
+  --c-people: #2d5aa8;
+  --c-places: #2c7d62;
+  --c-events: #b5502f;
+  --c-themes: #6f4aa8;
+  --c-quotes: #b3262f;
+  --c-source: #6b6f7a;
+  --c-timelines: #1d7c84;
+  --c-home: #2a241b;
 }
 :root[data-design="constellation"][data-theme="light"] body {
   background:
-    radial-gradient(ellipse 90% 45% at 50% 108%, rgba(255, 196, 150, 0.38), transparent 72%),
-    linear-gradient(to top, #f6e7d9 0%, #eef0f4 48%, #dfe7f2 100%) #eef0f4;
+    radial-gradient(ellipse 70% 60% at 50% 45%, #fdfaf3 0%, #f6efe1 55%, #ebe1cc 100%) #f3ecdd;
 }`;
   document.head.appendChild(style);
 
@@ -118,9 +121,9 @@
         g.addColorStop(0.6, rgba(col, 0.045));
         g.addColorStop(1, rgba(col, 0));
       } else {
-        g.addColorStop(0, rgba(col, 0.34));
-        g.addColorStop(0.3, rgba(col, 0.14));
-        g.addColorStop(0.65, rgba(col, 0.04));
+        g.addColorStop(0, rgba(col, 0.22));
+        g.addColorStop(0.35, rgba(col, 0.08));
+        g.addColorStop(0.7, rgba(col, 0.02));
         g.addColorStop(1, rgba(col, 0));
       }
       c.fillStyle = g;
@@ -141,11 +144,11 @@
         g.addColorStop(0.85 * e, rgba(mix(col, WHITE, 0.45), 0.9));
         g.addColorStop(1, rgba(col, 0));
       } else {
-        const lift = mix(col, WHITE, 0.28);
-        g.addColorStop(0, rgba(lift, 1));
-        g.addColorStop(0.5 * e, rgba(col, 1));
-        g.addColorStop(0.92 * e, rgba(col, 1));
-        g.addColorStop(1, rgba(col, 0));
+        const ink = mix(col, [30, 22, 12], 0.25);
+        g.addColorStop(0, rgba(mix(col, WHITE, 0.18), 1));
+        g.addColorStop(0.55 * e, rgba(col, 1));
+        g.addColorStop(0.9 * e, rgba(ink, 1));
+        g.addColorStop(1, rgba(ink, 0));
       }
       c.fillStyle = g;
       c.fillRect(0, 0, s, s);
@@ -177,10 +180,10 @@
     const px = Math.round(TILE * dpr);
     return sprite("sky" + dark, px, (c, s) => {
       for (const st of sky) {
-        if (!dark && st.a < 0.3) continue; // dawn: only the last few stars remain
+        if (!dark && st.a < 0.25) continue; // parchment: a few faint flecks
         const x = st.x * s, y = st.y * s, r = st.r * dpr;
-        const col = dark ? st.tint : [92, 110, 150];
-        const a = dark ? st.a : st.a * 0.35;
+        const col = dark ? st.tint : [140, 110, 70];
+        const a = dark ? st.a : st.a * 0.3;
         if (dark && st.r > 0.95) {
           const g = c.createRadialGradient(x, y, 0, x, y, r * 5);
           g.addColorStop(0, rgba(col, a * 0.35));
@@ -306,7 +309,8 @@
     drawNode(n, ctx, k, s) {
       const dark = s.theme !== "light";
       const r = s.r, b = bright(n), dpr = DPR();
-      const core = Math.max(r * (0.42 + 0.2 * b), (dark ? 0.75 : 0.95) / k);
+      // On paper there is no glow to carry a star, so the ink dot itself runs larger
+      const core = dark ? Math.max(r * (0.42 + 0.2 * b), 0.75 / k) : Math.max(r * (0.6 + 0.25 * b), 1.3 / k);
       const coreHalf = core * CORE_EXT;
       const coreCv = coreSprite(s.color, dark, bucket(coreHalf * 2 * k * dpr));
 
@@ -321,7 +325,7 @@
       ctx.globalAlpha = Math.min(1, (dark ? 0.3 + 0.7 * b : 0.35 + 0.55 * b) * (s.focal ? 1.35 : 1));
       blit(ctx, glowSprite(s.color, dark, bucket(glow * 2 * k * dpr)), n.x, n.y, glow);
 
-      if (hubs.has(n.id)) {
+      if (dark && hubs.has(n.id)) {
         const len = Math.max(r * 4.6, 16 / k);
         ctx.globalAlpha = dark ? 0.5 : 0.32;
         blit(ctx, sparkleSprite(s.color, dark, bucket(len * 2 * k * dpr)), n.x, n.y, len);
@@ -355,7 +359,8 @@
         ctx.lineWidth = 0.5 / k;
       } else {
         // Zoomed out, the web of links turns to haze; let it emerge as you zoom in
-        ctx.globalAlpha = Math.max(0.18, Math.min(1, (k - 0.35) / 1.4));
+        const floor = s.theme === "light" ? 0.3 : 0.18;
+        ctx.globalAlpha = Math.max(floor, Math.min(1, (k - 0.35) / 1.4));
         ctx.strokeStyle = s.color;
         ctx.lineWidth = 0.55 / k;
       }
