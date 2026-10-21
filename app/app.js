@@ -693,9 +693,7 @@
       refresh();
     };
     $("#btn-theme").onclick = () => {
-      const t = document.documentElement.dataset.theme === "light" ? "dark" : "light";
-      store.set(`theme:${designName}`, t);
-      applyTheme(t);
+      applyTheme(document.documentElement.dataset.theme === "light" ? "dark" : "light");
     };
 
     const reader = $("#reader");
@@ -737,7 +735,8 @@
     initGraph();
     document.documentElement.dataset.design = designName;
     if (new URLSearchParams(location.search).has("embed")) document.documentElement.dataset.embed = "";
-    applyTheme(store.get(`theme:${designName}`) || D.theme || "dark");
+    // Always open on the night sky; the toggle only changes the current visit
+    applyTheme(D.theme || "dark");
     if (D.setup) D.setup(designApi());
     bindUI();
     syncData();
@@ -745,6 +744,99 @@
     if (currentId()) setTimeout(route, 300);
     else state.pendingFit = true;
     showLanding();
+  }
+
+  // Quick tour: a pulsing ring and tip step down the toolbar; click anywhere to advance
+  const TOUR = [
+    ["#btn-home", "Start here", "Opens the index note, the best place to begin reading."],
+    ["#btn-local", "Local graph", "Narrows the sky to the note you’re reading and its direct connections. Shortcut: L."],
+    ["#btn-labels", "Labels", "Shows or hides the names beside the stars."],
+    ["#btn-fit", "Fit to screen", "Zooms back out to the whole graph after you’ve wandered."],
+    ["#btn-theme", "Light or dark", "Switches between the night sky and parchment."],
+  ];
+  function startTour() {
+    store.set("tour-seen", "1");
+    const tour = document.createElement("div");
+    tour.className = "tour";
+    tour.innerHTML =
+      '<div class="tour-ring"></div>' +
+      '<div class="tour-tip" role="status" aria-live="polite"><div class="tour-step"></div>' +
+      '<div class="tour-title"></div><p class="tour-text"></p>' +
+      '<div class="tour-actions"><button type="button" class="tour-skip">Skip</button>' +
+      '<span class="tour-dots">' + TOUR.map(() => "<i></i>").join("") + "</span>" +
+      '<button type="button" class="tour-next">Next</button></div></div>';
+    document.body.appendChild(tour);
+    const ring = tour.querySelector(".tour-ring"), tip = tour.querySelector(".tour-tip");
+    let i = -1, lit = null, raf = 0, timers = [], demoOpen = false;
+
+    const place = () => {
+      const r = $(TOUR[i][0]).getBoundingClientRect();
+      ring.style.cssText = `left:${r.left - 4}px;top:${r.top - 4}px;width:${r.width + 8}px;height:${r.height + 8}px`;
+      const h = tip.offsetHeight, mid = r.top + r.height / 2;
+      const top = Math.max(10, Math.min(innerHeight - h - 10, mid - h / 2));
+      tip.style.right = `${innerWidth - r.left + 16}px`;
+      tip.style.top = `${top}px`;
+      tip.style.setProperty("--arrow", `${mid - top}px`);
+    };
+    // On "Start here", press the button for real: the notes panel slides in, then away again
+    const closeDemo = () => { if (demoOpen) { demoOpen = false; go(""); } };
+    const demo = () => {
+      timers.push(setTimeout(() => {
+        $("#btn-home").classList.add("tour-press");
+        setTimeout(() => $("#btn-home").classList.remove("tour-press"), 220);
+        demoOpen = true;
+        go("index");
+      }, 650));
+      timers.push(setTimeout(closeDemo, 2500));
+    };
+    const show = (n) => {
+      if (n >= TOUR.length) return end();
+      timers.forEach(clearTimeout);
+      timers = [];
+      closeDemo();
+      i = Math.max(0, n);
+      const [sel, title, text] = TOUR[i];
+      if (lit) lit.classList.remove("tour-lit");
+      lit = $(sel);
+      lit.classList.add("tour-lit");
+      tour.querySelector(".tour-step").textContent = `${i + 1} / ${TOUR.length}`;
+      tour.querySelector(".tour-title").textContent = title;
+      tour.querySelector(".tour-text").textContent = text;
+      tour.querySelector(".tour-next").textContent = i === TOUR.length - 1 ? "Done" : "Next";
+      tour.querySelectorAll(".tour-dots i").forEach((d, j) => d.classList.toggle("on", j === i));
+      tip.classList.remove("swap");
+      void tip.offsetWidth;
+      tip.classList.add("swap");
+      place();
+      if (i === 0) demo();
+    };
+    // Follow the toolbar while it slides aside for the notes panel
+    const track = () => { place(); raf = requestAnimationFrame(track); };
+    const end = () => {
+      timers.forEach(clearTimeout);
+      closeDemo();
+      cancelAnimationFrame(raf);
+      if (lit) lit.classList.remove("tour-lit");
+      tour.classList.add("is-gone");
+      setTimeout(() => tour.remove(), 400);
+      document.removeEventListener("keydown", onKey, true);
+      removeEventListener("resize", place);
+    };
+    const onKey = (e) => {
+      if (e.key === "Enter" || e.key === "ArrowRight" || e.key === "ArrowDown" || e.key === " ") { e.preventDefault(); show(i + 1); }
+      else if (e.key === "ArrowLeft" || e.key === "ArrowUp") { e.preventDefault(); show(i - 1); }
+      else if (e.key === "Escape") { e.preventDefault(); end(); }
+      if (e.key !== "Tab") e.stopImmediatePropagation();
+    };
+    tour.addEventListener("click", (e) => {
+      if (e.target.closest(".tour-skip")) end();
+      else show(i + 1);
+    });
+    document.addEventListener("keydown", onKey, true);
+    addEventListener("resize", place);
+    show(0);
+    track();
+    tour.querySelector(".tour-next").focus();
   }
 
   // Landing window: shown on arrival at the overview, skipped for deep links and embeds
@@ -759,6 +851,7 @@
       landing.classList.add("is-gone");
       setTimeout(() => landing.remove(), 600);
       document.removeEventListener("keydown", onKey, true);
+      if (!store.get("tour-seen")) setTimeout(startTour, 650);
     };
     // Capture keys while open so the graph's own shortcuts don't fire underneath
     const onKey = (e) => {

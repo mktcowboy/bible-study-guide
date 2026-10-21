@@ -363,3 +363,53 @@ button.icon svg { width: 18px; height: 18px; }
 }
 .landing-enter:hover, .landing-enter:focus-visible { background: var(--accent); color: var(--bg); outline: none; }
 @media (prefers-reduced-motion: reduce) { .landing, .landing-card { transition: none; } }
+
+/* Quick tour of the toolbar */
+.tour { position: fixed; inset: 0; z-index: 90; cursor: pointer; animation: tour-in .3s ease; transition: opacity .35s; }
+.tour.is-gone { opacity: 0; pointer-events: none; }
+@keyframes tour-in { from { opacity: 0; } }
+.tour-ring {
+  position: fixed; border-radius: 12px; border: 1.5px solid var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent);
+  transition: top .38s cubic-bezier(.3, .7, .2, 1), left .38s cubic-bezier(.3, .7, .2, 1);
+  animation: tour-pulse 1.3s ease-in-out infinite; pointer-events: none;
+}
+@keyframes tour-pulse {
+  50% { box-shadow: 0 0 0 9px color-mix(in srgb, var(--accent) 0%, transparent), 0 0 18px color-mix(in srgb, var(--accent) 35%, transparent); }
+}
+.hud-tools button.tour-press { transform: scale(.86); }
+.hud-tools button { transition: transform .18s ease; }
+.hud-tools button.tour-lit { color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent); }
+.tour-tip {
+  position: fixed; width: min(250px, calc(100vw - 84px)); padding: 13px 15px 11px;
+  background: var(--panel-solid); border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow);
+  font: 13px/1.5 var(--ui); color: var(--muted); cursor: default;
+  transition: top .38s cubic-bezier(.3, .7, .2, 1);
+}
+.tour-tip::after {
+  content: ""; position: absolute; right: -6px; top: calc(var(--arrow, 24px) - 6px);
+  width: 10px; height: 10px; background: var(--panel-solid);
+  border-top: 1px solid var(--line); border-right: 1px solid var(--line); transform: rotate(45deg);
+  transition: top .38s cubic-bezier(.3, .7, .2, 1);
+}
+.tour-tip.swap .tour-title, .tour-tip.swap .tour-text { animation: tour-swap .3s ease; }
+@keyframes tour-swap { from { opacity: 0; transform: translateX(6px); } }
+.tour-step { font: 500 10px var(--ui); letter-spacing: .16em; text-transform: uppercase; color: var(--accent); }
+.tour-title { margin-top: 3px; font: 600 20px/1.2 var(--display); color: var(--text); }
+.tour-text { margin: 4px 0 10px; }
+.tour-actions { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.tour-actions button {
+  border: 0; background: none; cursor: pointer; font: 500 12px var(--ui); letter-spacing: .04em; padding: 4px 2px;
+}
+.tour-skip { color: var(--faint); }
+.tour-skip:hover { color: var(--text); }
+.tour-next { color: var(--accent); }
+.tour-next:hover, .tour-next:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
+.tour-actions button:focus { outline: none; }
+.tour-dots { display: flex; gap: 5px; }
+.tour-dots i { width: 5px; height: 5px; border-radius: 50%; background: var(--line); transition: background .2s, transform .2s; }
+.tour-dots i.on { background: var(--accent); transform: scale(1.3); }
+@media (prefers-reduced-motion: reduce) {
+  .tour, .tour-ring, .tour-tip, .tour-tip::after { animation: none; transition: none; }
+  .tour-tip.swap .tour-title, .tour-tip.swap .tour-text { animation: none; }
+}
