@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redirecting…</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #090b10; color: #c9d1d9; font: 16px/1.5 system-ui, -apple-system, sans-serif; }
+  body { display: flex; align-items: center; justify-content: center; }
+  a { color: #8ab4f8; }
+</style>
+<script>
+(function () {
+  var p = location.pathname;
+  var base = p.indexOf("/bible-study-guide/") === 0 || p === "/bible-study-guide" ? "/bible-study-guide/" : "/";
+  var rest = p.slice(base === "/" ? 1 : base.length);
+  var segs = rest.split("/").filter(Boolean);
+  var target = base;
+  if (segs.length) {
+    var s = segs[segs.length - 1];
+    try { s = decodeURIComponent(s); } catch (e) {}
+    s = s.replace(/\.html$/i, "").replace(/-/g, " ");
+    var slug = s.toLowerCase()
+      .replace(/['’]/g, "")
+      .replace(/&/g, "and")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+    if (slug) target = base + "#/" + slug;
+  }
+  window.__target = target;
+  location.replace(target);
+})();
+</script>
+</head>
+<body>
+<p>Redirecting… <a id="go" href="/bible-study-guide/">Continue</a></p>
+<script>
+  if (window.__target) document.getElementById("go").href = window.__target;
+</script>
+</body>
+</html>

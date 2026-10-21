@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bible Study Graph</title>
+  <meta name="description" content="An interlinked KJV Bible study guide — 66 books, people, places, events, themes, and timelines, explored as a graph.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='5' fill='%23e0b45c'/><circle cx='6' cy='8' r='2.5' fill='%236fa8ff'/><circle cx='26' cy='9' r='2.5' fill='%235fc79a'/><circle cx='24' cy='26' r='2.5' fill='%23f08a6c'/><path d='M6 8 16 16 26 9M16 16 24 26' stroke='%23e0b45c' stroke-width='1' opacity='.6'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="graph" aria-label="Graph of all notes"></div>
+
+  <header class="hud hud-top">
+    <div class="brand">
+      <a href="#/" class="brand-title" title="Overview">Holy Bible <span>Study Graph</span></a>
+      <div class="brand-sub"><span id="stat-notes">1,139</span> notes · <span id="stat-links">7,136</span> connections · KJV</div>
+    </div>
+    <div class="search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Search people, places, books…" autocomplete="off" spellcheck="false" aria-label="Search notes">
+      <kbd>/</kbd>
+      <ul id="results" role="listbox" hidden></ul>
+    </div>
+  </header>
+
+  <div class="hud hud-tools" role="toolbar" aria-label="Graph controls">
+    <button id="btn-home" title="Start here (index note)">
+      <svg viewBox="0 0 24 24"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2Zm0 0A2 2 0 0 0 6 22h13"/></svg>
+    </button>
+    <button id="btn-local" title="Local graph: show only the selected note's neighborhood" aria-pressed="false">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="4.5" cy="6" r="1.6"/><circle cx="19.5" cy="6" r="1.6"/><circle cx="12" cy="20.5" r="1.6"/><path d="m6 7 4 3.2M18 7l-4 3.2M12 15v4"/></svg>
+    </button>
+    <button id="btn-labels" title="Toggle labels" aria-pressed="true">
+      <svg viewBox="0 0 24 24"><path d="M4 7V5h16v2M9 19h6M12 5v14"/></svg>
+    </button>
+    <button id="btn-fit" title="Fit graph to screen">
+      <svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+    </button>
+    <button id="btn-theme" title="Toggle light / dark">
+      <svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    </button>
+  </div>
+
+  <nav class="hud hud-legend" id="legend" aria-label="Filter by category"></nav>
+
+  <div class="hint" id="hint">Drag to pan · scroll to zoom · click any star to read</div>
+
+  <aside id="reader" aria-live="polite" hidden>
+    <div class="reader-bar">
+      <button class="icon" id="btn-back" title="Back" aria-label="Back" hidden>
+        <svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>
+      </button>
+      <div class="crumbs" id="crumbs"></div>
+      <button class="icon" id="btn-close" title="Close (Esc)" aria-label="Close">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="reader-scroll" id="reader-scroll">
+      <article id="article"></article>
+      <section class="connections" id="connections"></section>
+    </div>
+  </aside>
+
+  <div id="popover" hidden></div>
+
+  <noscript><p class="noscript">This site needs JavaScript to draw the graph.</p></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/force-graph@1.51.4/dist/force-graph.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked@16.4.2/lib/marked.umd.js"></script>
+  <script>window.DESIGNS = {};</script>
+  <script src="designs/constellation.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

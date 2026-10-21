@@ -1,12 +1,12 @@
 # Holy Bible - Obsidian Study Guide
 
-A published, fully interlinked Bible study vault — 1,139 notes covering all 66 canonical books (KJV), plus people, places, events, themes, and timelines. Authored in [Obsidian](https://obsidian.md) and published as a static site with [Quartz 4](https://quartz.jzhao.xyz/).
+A published, fully interlinked Bible study vault — 1,139 notes covering all 66 canonical books (KJV), plus people, places, events, themes, and timelines. Authored in [Obsidian](https://obsidian.md) and published as a custom, zero-dependency, graph-first static site.
 
 ## Last updated
 
-**October 19, 2026** · 1,139 notes
+**October 20, 2026** · 1,139 notes
 
-Latest changes: added the Words of Christ hub (2,029 red-letter sayings), gave the Father, Son, and Holy Spirit their own Holy Trinity folder, and highlighted Christ's words inline in the New Testament KJV source text.
+Latest changes: replaced Quartz with a custom graph-first site (no Quartz, no dependencies); old Quartz URLs redirect to the new pages. Previously: added the Words of Christ hub (2,029 red-letter sayings), gave the Father, Son, and Holy Spirit their own Holy Trinity folder, and highlighted Christ's words inline in the New Testament KJV source text.
 
 ## Live site
 
@@ -23,18 +23,19 @@ https://mktcowboy.github.io/bible-study-guide/
   - `06 Quotes/` — Words of Christ hub: every red-letter saying of Jesus, by book
   - `07 Source Text/` — public-domain KJV source text, one note per book, with the words of Christ in red
   - `08 Timelines/` — canonical, prophetic, New Testament, and intertestamental timelines
-- `site/` — the Quartz static-site generator, its configuration, and license
-- `.github/workflows/deploy.yml` — builds and deploys to GitHub Pages on every push to `main`
+- `app/` — the front end (single-page app: `index.html`, `style.css`, `app.js`, `404.html` redirect)
+- `build.mjs` — build script: reads `content/` and writes the site to `public/`
+- `.github/workflows/deploy.yml` — runs `node build.mjs` and deploys `public/` to GitHub Pages on every push to `main`
 
 ## Develop locally
 
 ```bash
-cd site
-npm install
-npx quartz build --directory ../content --serve
+node build.mjs
+npx serve public
+# or: python3 -m http.server -d public 8080
 ```
 
-Then open http://localhost:8080.
+Then open the URL `serve` prints (or http://localhost:8080 with Python).
 
 ## Updating content
 
@@ -42,4 +43,4 @@ Edit notes in the Obsidian vault (the `Bible-Vault` repo), then run `scripts/syn
 
 ---
 
-Built with [Quartz](https://quartz.jzhao.xyz/) v4.5.2 (MIT, see `site/LICENSE.txt`). The KJV text is public domain.
+The KJV text is public domain.
