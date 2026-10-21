@@ -407,6 +407,8 @@ button.icon svg { width: 18px; height: 18px; }
 .tour-next:hover, .tour-next:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
 .tour-actions button:focus { outline: none; }
 .tour-dots { display: flex; gap: 5px; }
+.tour.single .tour-step, .tour.single .tour-dots, .tour.single .tour-skip { display: none; }
+.tour.single .tour-actions { justify-content: flex-end; }
 .tour-dots i { width: 5px; height: 5px; border-radius: 50%; background: var(--line); transition: background .2s, transform .2s; }
 .tour-dots i.on { background: var(--accent); transform: scale(1.3); }
 @media (prefers-reduced-motion: reduce) {

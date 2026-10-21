@@ -746,13 +746,10 @@
     showLanding();
   }
 
-  // Quick tour: a pulsing ring and tip step down the toolbar; click anywhere to advance
+  // Quick tour: a pulsing ring and tip point at "Start here", press it once, then get out of the way.
+  // Add entries to step through more toolbar buttons (click anywhere to advance).
   const TOUR = [
     ["#btn-home", "Start here", "Opens the index note, the best place to begin reading."],
-    ["#btn-local", "Local graph", "Narrows the sky to the note you’re reading and its direct connections. Shortcut: L."],
-    ["#btn-labels", "Labels", "Shows or hides the names beside the stars."],
-    ["#btn-fit", "Fit to screen", "Zooms back out to the whole graph after you’ve wandered."],
-    ["#btn-theme", "Light or dark", "Switches between the night sky and parchment."],
   ];
   function startTour() {
     store.set("tour-seen", "1");
@@ -788,6 +785,7 @@
         go("index");
       }, 650));
       timers.push(setTimeout(closeDemo, 2500));
+      if (TOUR.length === 1) timers.push(setTimeout(end, 2900));
     };
     const show = (n) => {
       if (n >= TOUR.length) return end();
@@ -802,7 +800,8 @@
       tour.querySelector(".tour-step").textContent = `${i + 1} / ${TOUR.length}`;
       tour.querySelector(".tour-title").textContent = title;
       tour.querySelector(".tour-text").textContent = text;
-      tour.querySelector(".tour-next").textContent = i === TOUR.length - 1 ? "Done" : "Next";
+      tour.querySelector(".tour-next").textContent = i === TOUR.length - 1 ? "Got it" : "Next";
+      tour.classList.toggle("single", TOUR.length === 1);
       tour.querySelectorAll(".tour-dots i").forEach((d, j) => d.classList.toggle("on", j === i));
       tip.classList.remove("swap");
       void tip.offsetWidth;
