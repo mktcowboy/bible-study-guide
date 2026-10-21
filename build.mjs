@@ -1,5 +1,6 @@
 // Builds the graph site from content/ into public/. No dependencies.
 // Usage: node build.mjs
+import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -219,6 +220,18 @@ const nodes = notes.map((n, i) => ({
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(path.join(OUT, "n"), { recursive: true });
 fs.cpSync(APP, OUT, { recursive: true });
+
+// Stamp local scripts and styles with a content hash so browsers pick up changes right away
+{
+  const shell = path.join(OUT, "index.html");
+  const stamped = fs.readFileSync(shell, "utf8").replace(/(src|href)="((?:designs\/)?[\w-]+\.(?:js|css))"/g, (m, attr, file) => {
+    const f = path.join(OUT, file);
+    if (!fs.existsSync(f)) return m;
+    const v = crypto.createHash("sha1").update(fs.readFileSync(f)).digest("hex").slice(0, 8);
+    return `${attr}="${file}?v=${v}"`;
+  });
+  fs.writeFileSync(shell, stamped);
+}
 
 for (const n of notes) {
   const meta = {};

@@ -752,7 +752,6 @@
     ["#btn-home", "Start here", "Opens the index note, the best place to begin reading."],
   ];
   function startTour() {
-    store.set("tour-seen", "1");
     const tour = document.createElement("div");
     tour.className = "tour";
     tour.innerHTML =
@@ -850,7 +849,7 @@
       landing.classList.add("is-gone");
       setTimeout(() => landing.remove(), 600);
       document.removeEventListener("keydown", onKey, true);
-      if (!store.get("tour-seen")) setTimeout(startTour, 650);
+      setTimeout(startTour, 650);
     };
     // Capture keys while open so the graph's own shortcuts don't fire underneath
     const onKey = (e) => {
