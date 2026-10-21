@@ -744,6 +744,30 @@
     fitFocus(0);
     if (currentId()) setTimeout(route, 300);
     else state.pendingFit = true;
+    showLanding();
+  }
+
+  // Landing window: shown on arrival at the overview, skipped for deep links and embeds
+  function showLanding() {
+    const landing = $("#landing");
+    if (!landing) return;
+    if (currentId() || "embed" in document.documentElement.dataset) { landing.remove(); return; }
+    $("#landing-notes").textContent = state.nodes.length.toLocaleString();
+    $("#landing-links").textContent = state.links.length.toLocaleString();
+    landing.hidden = false;
+    const enter = () => {
+      landing.classList.add("is-gone");
+      setTimeout(() => landing.remove(), 600);
+      document.removeEventListener("keydown", onKey, true);
+    };
+    // Capture keys while open so the graph's own shortcuts don't fire underneath
+    const onKey = (e) => {
+      if (e.key === "Enter" || e.key === "Escape") { e.preventDefault(); enter(); }
+      if (e.key !== "Tab") e.stopImmediatePropagation();
+    };
+    $("#landing-enter").addEventListener("click", enter);
+    document.addEventListener("keydown", onKey, true);
+    $("#landing-enter").focus();
   }
 
   main();

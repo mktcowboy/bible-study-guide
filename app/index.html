@@ -14,6 +14,28 @@
 <body>
   <div id="graph" aria-label="Graph of all notes"></div>
 
+  <div class="landing" id="landing" role="dialog" aria-modal="true" aria-labelledby="landing-title" hidden>
+    <div class="landing-card">
+      <div class="landing-eyebrow">King James Version</div>
+      <h1 class="landing-title" id="landing-title">Holy Bible <span>Study</span> Graph</h1>
+      <p class="landing-lede">A complete Bible study guide drawn as a map of stars: all 66 books of the KJV, with the people, places, events, and themes that run between them.</p>
+      <div class="landing-stats">
+        <div><b id="landing-notes">1,139</b><span>Notes</span></div>
+        <div><b id="landing-links">7,136</b><span>Connections</span></div>
+        <div><b>66</b><span>Books</span></div>
+      </div>
+      <ul class="landing-how">
+        <li><b>Each star is a note</b> — a book, person, place, event, theme, or timeline.</li>
+        <li><b>Each line is a reference</b> from one note to another. Well-connected notes sit at the center of their cluster.</li>
+        <li><b>Click any star to read it</b>, then follow its connections. Press <kbd>/</kbd> to search.</li>
+      </ul>
+      <div class="landing-key" aria-label="Colour key">
+        <span style="--c: var(--c-books)">Books</span><span style="--c: var(--c-people)">People</span><span style="--c: var(--c-places)">Places</span><span style="--c: var(--c-events)">Events</span><span style="--c: var(--c-themes)">Themes</span><span style="--c: var(--c-timelines)">Timelines</span><span style="--c: var(--c-quotes)">Words of Christ</span><span style="--c: var(--c-source)">Source text</span>
+      </div>
+      <button type="button" class="landing-enter" id="landing-enter">Enter the graph</button>
+    </div>
+  </div>
+
   <header class="hud hud-top">
     <div class="brand">
       <a href="#/" class="brand-title" title="Overview">Holy Bible <span>Study Graph</span></a>
