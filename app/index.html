@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="graph.json" as="fetch" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 </head>
 <body>
   <div id="graph" aria-label="Graph of all notes"></div>
@@ -91,10 +93,10 @@
 
   <noscript><p class="noscript">This site needs JavaScript to draw the graph.</p></noscript>
 
-  <script src="https://cdn.jsdelivr.net/npm/force-graph@1.51.4/dist/force-graph.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/marked@16.4.2/lib/marked.umd.js"></script>
   <script>window.DESIGNS = {};</script>
-  <script src="designs/constellation.js"></script>
-  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/force-graph@1.51.4/dist/force-graph.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked@16.4.2/lib/marked.umd.js" defer></script>
+  <script src="designs/constellation.js" defer></script>
+  <script src="app.js" defer></script>
 </body>
 </html>

@@ -3,6 +3,7 @@
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
+import { layout } from "./tools/layout.mjs";
 
 const ROOT = path.dirname(new URL(import.meta.url).pathname);
 const CONTENT = path.join(ROOT, "content");
@@ -215,6 +216,13 @@ const nodes = notes.map((n, i) => ({
   ...(n.data.order ? { o: Number(n.data.order) } : {}),
   ...(n.data.testament ? { te: n.data.testament } : {}),
 }));
+
+// --- Settled overview positions, so the browser skips the layout simulation on load
+const positions = layout(nodes, links);
+for (const n of nodes) {
+  const p = positions.get(n.id);
+  if (p) [n.x, n.y] = p;
+}
 
 // --- Write output
 fs.rmSync(OUT, { recursive: true, force: true });

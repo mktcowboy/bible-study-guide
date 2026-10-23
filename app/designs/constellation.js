@@ -272,8 +272,8 @@
       const centers = {};
       for (const [g, c] of Object.entries(CLUSTERS)) centers[g] = [c[0] * 1.2, c[1] * 1.2];
 
-      // Organic start: a wide, soft scatter around each center
-      for (const n of nodes) {
+      // Organic start: a wide, soft scatter around each center (skipped when the build shipped a layout)
+      for (const n of S.prelaid ? [] : nodes) {
         const c = centers[n.g] || [0, 0];
         const a = rand() * 2 * Math.PI, d = Math.sqrt(rand()) * 300;
         n.x = c[0] + Math.cos(a) * d;
@@ -343,6 +343,32 @@
         ctx.strokeStyle = dark ? rgba(mix(rgb(s.color), [255, 236, 200], 0.6), 1) : s.color;
         ctx.stroke();
       }
+    },
+
+    // All links in three batched paths (plain, dimmed, highlighted) instead of one stroke per link
+    drawLinks(ctx, k, s) {
+      const base = [], hi = [];
+      for (const l of s.links) {
+        const a = l.source, b = l.target;
+        if (a.x == null || b.x == null) continue;
+        (s.hiLinks.has(l) ? hi : base).push(a.x, a.y, b.x, b.y);
+      }
+      const stroke = (pts, style, width, alpha) => {
+        if (!pts.length) return;
+        ctx.beginPath();
+        for (let i = 0; i < pts.length; i += 4) { ctx.moveTo(pts[i], pts[i + 1]); ctx.lineTo(pts[i + 2], pts[i + 3]); }
+        ctx.globalAlpha = alpha;
+        ctx.strokeStyle = style;
+        ctx.lineWidth = width;
+        ctx.stroke();
+      };
+      if (s.dim) stroke(base, s.edgeDim || "rgba(190,205,255,0.012)", 0.5 / k, 1);
+      else {
+        // Zoomed out, the web of links turns to haze; let it emerge as you zoom in
+        const floor = s.theme === "light" ? 0.3 : 0.18;
+        stroke(base, s.edge, 0.55 / k, Math.max(floor, Math.min(1, (k - 0.35) / 1.4)));
+      }
+      stroke(hi, s.edgeHi, 1 / k, 1);
     },
 
     drawLink(l, ctx, k, s) {

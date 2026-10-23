@@ -42,13 +42,15 @@
     nodes: [], links: [], byId: new Map(), adj: new Map(),
     selected: null, hover: null, hiNodes: new Set(), hiLinks: new Set(),
     hidden: new Set(["Source Text"]), local: false, labels: store.get("labels") !== "0",
-    colors: {}, edge: "", edgeDim: "", edgeHi: "", text: "", bg: "", muted: "",
+    colors: {}, edge: "", edgeDim: "", edgeHi: "", text: "", bg: "", muted: "", theme: "dark",
+    linksOf: new Map(),
     noteCache: new Map(), search: null,
   };
 
   // ---------- Theme ----------
   function applyTheme(t) {
     document.documentElement.dataset.theme = t;
+    state.theme = t;
     for (const [g, v] of GROUPS) state.colors[g] = css(v);
     state.edge = css("--link-edge");
     state.edgeDim = css("--link-dim");
@@ -61,6 +63,11 @@
   }
 
   // ---------- Graph ----------
+  // Phones report 3x pixel density; drawing the canvas at 2x looks the same on a star field
+  // and cuts the pixels to fill by more than half
+  if (window.devicePixelRatio > 2) {
+    try { Object.defineProperty(window, "devicePixelRatio", { get: () => 2, configurable: true }); } catch {}
+  }
   let G;
   const radius = D.radius || ((n) => 1.8 + Math.sqrt(n.d) * 1.05);
   const sid = (x) => (typeof x === "object" ? x.id : x);
@@ -127,9 +134,8 @@
 
     const focal = n === sel || n === state.hover;
     if (D.drawNode) {
-      ctx.save();
-      D.drawNode(n, ctx, k, { r, color, lit, focal, focus: !!focus, theme: document.documentElement.dataset.theme });
-      ctx.restore();
+      // Designs only touch alpha and stroke style, and alpha is reset below, so skip save/restore per node
+      D.drawNode(n, ctx, k, { r, color, lit, focal, focus: !!focus, theme: state.theme });
     } else {
       ctx.globalAlpha = lit ? 1 : 0.13;
       if (focal) {
@@ -187,6 +193,10 @@
     ctx.fillText(n.t, n.x, n.y + r + 2 / k);
   }
 
+  function onEngineStop() {
+    if (state.pendingFit) { state.pendingFit = false; fitFocus(); }
+  }
+
   function initGraph() {
     const el = $("#graph");
     G = new ForceGraph(el)
@@ -206,6 +216,9 @@
       .warmupTicks(160)
       .cooldownTime(4000)
       .onNodeHover((n) => {
+        // Hovering a star for a moment starts loading its note, so the click opens instantly
+        clearTimeout(state.prefetchTimer);
+        if (n) state.prefetchTimer = setTimeout(() => loadNote(n.id).catch(() => {}), 120);
         state.hover = n || null;
         el.style.cursor = n ? "pointer" : "";
         if (!state.selected) highlight(n);
@@ -216,6 +229,14 @@
       .onRenderFramePre((ctx, k) => {
         labelGrid.clear();
         if (D.drawBackground) { ctx.save(); D.drawBackground(ctx, k, designApi()); ctx.restore(); }
+        if (D.drawLinks) {
+          ctx.save();
+          D.drawLinks(ctx, k, {
+            links: G.graphData().links, hiLinks: state.hiLinks, dim: !!(state.selected || state.hover),
+            edge: state.edge, edgeDim: state.edgeDim, edgeHi: state.edgeHi, theme: state.theme,
+          });
+          ctx.restore();
+        }
         if (D.clusterLabels !== false) drawClusterLabels(ctx, k);
       })
       .onRenderFramePost((ctx, k) => {
@@ -226,7 +247,7 @@
           }
         }
       })
-      .onEngineStop(() => { if (state.pendingFit) { state.pendingFit = false; fitFocus(); } });
+      .onEngineStop(onEngineStop);
 
     G.d3Force("charge").strength(-26).distanceMax(150);
     // Links inside a category hold tight; cross-category links barely pull, so islands stay distinct
@@ -239,7 +260,10 @@
     G.d3Force("cluster", clusterForce());
     G.d3Force("collide", collideForce());
 
-    if (D.drawLink) {
+    if (D.drawLinks) {
+      // The design draws every link in a few batched paths (see onRenderFramePre)
+      G.linkVisibility(false);
+    } else if (D.drawLink) {
       G.linkCanvasObjectMode(() => "replace").linkCanvasObject((l, ctx, k) => {
         if (l.source.x == null) return;
         const hi = state.hiLinks.has(l);
@@ -248,7 +272,7 @@
           hi, dim: !hi && !!(state.selected || state.hover),
           color: hi ? state.edgeHi : state.edge,
           sourceColor: state.colors[l.source.g], targetColor: state.colors[l.target.g],
-          theme: document.documentElement.dataset.theme,
+          theme: state.theme,
         });
         ctx.restore();
       });
@@ -263,7 +287,7 @@
     return {
       G, nodes: state.nodes, links: state.links, adj: state.adj, byId: state.byId,
       colors: state.colors, rand, radius, CLUSTERS, state,
-      theme: document.documentElement.dataset.theme,
+      theme: state.theme,
       graphNodes: () => G.graphData().nodes,
     };
   }
@@ -309,12 +333,10 @@
     state.hiLinks.clear();
     if (n && inGraph.has(n.id)) {
       state.hiNodes.add(n.id);
-      for (const l of state.links) {
-        if (l.source === n || l.target === n) {
-          state.hiLinks.add(l);
-          state.hiNodes.add(l.source.id);
-          state.hiNodes.add(l.target.id);
-        }
+      for (const l of state.linksOf.get(n.id) || []) {
+        state.hiLinks.add(l);
+        state.hiNodes.add(sid(l.source));
+        state.hiNodes.add(sid(l.target));
       }
     }
     refresh();
@@ -405,6 +427,9 @@
       state.noteCache.set(id, fetch(`n/${encodeURIComponent(id)}.json`).then((r) => {
         if (!r.ok) throw new Error(r.status);
         return r.json();
+      }).catch((e) => {
+        state.noteCache.delete(id); // let the next attempt retry
+        throw e;
       }));
     }
     return state.noteCache.get(id);
@@ -533,14 +558,34 @@
   let results = [], cursor = 0;
   const norm = (s) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
 
+  // Normalized titles, words, and aliases are computed once per node, not on every keystroke
+  function keys(n) {
+    if (!n._k) {
+      const t = norm(n.t);
+      n._k = { t, words: t.split(/[\s(-]+/), aliases: n.a.map(norm) };
+    }
+    return n._k;
+  }
+
   function score(n, q) {
-    const t = norm(n.t);
+    const { t, words, aliases } = keys(n);
     if (t === q) return 1000 + n.d;
     if (t.startsWith(q)) return 600 + n.d;
-    if (n.a.some((a) => norm(a).startsWith(q))) return 450 + n.d;
-    if (t.split(/[\s(-]+/).some((w) => w.startsWith(q))) return 350 + n.d;
+    if (aliases.some((a) => a.startsWith(q))) return 450 + n.d;
+    if (words.some((w) => w.startsWith(q))) return 350 + n.d;
     if (t.includes(q)) return 200 + n.d;
     return 0;
+  }
+
+  // Full-text index, normalized once when it arrives; fetched as soon as the search box gets focus
+  function loadSearch() {
+    if (!state.search) {
+      state.search = fetch("search.json")
+        .then((r) => r.json())
+        .then((idx) => idx.map(([id, text]) => [id, text, norm(text)]))
+        .catch(() => { state.search = null; return []; });
+    }
+    return state.search;
   }
 
   async function runSearch() {
@@ -557,13 +602,12 @@
 
     let textHits = [];
     if (q.length >= 3) {
-      if (!state.search) state.search = fetch("search.json").then((r) => r.json()).catch(() => []);
-      const idx = await state.search;
+      const idx = await loadSearch();
       if ($("#q").value.trim() !== raw) return;
       const seen = new Set(titleHits.map((h) => h.n.id));
-      for (const [id, text] of idx) {
+      for (const [id, text, lower] of idx) {
         if (seen.has(id)) continue;
-        const i = norm(text).indexOf(q);
+        const i = lower.indexOf(q);
         if (i < 0) continue;
         const n = state.byId.get(id);
         if (!n) continue;
@@ -667,7 +711,7 @@
       else if (e.key === "Enter") { e.preventDefault(); pick(cursor); }
       else if (e.key === "Escape") { q.value = ""; $("#results").hidden = true; q.blur(); }
     });
-    q.addEventListener("focus", () => { if (q.value.trim()) runSearch(); });
+    q.addEventListener("focus", () => { loadSearch(); if (q.value.trim()) runSearch(); });
     $("#results").addEventListener("mousedown", (e) => {
       const li = e.target.closest("li[data-i]");
       if (li) { e.preventDefault(); pick(+li.dataset.i); }
@@ -715,9 +759,12 @@
     const data = await fetch("graph.json").then((r) => r.json());
     const order = data.nodes.map((n) => n.id);
     state.nodes = data.nodes.sort((a, b) => b.d - a.d);
+    // The build ships settled positions; with them the graph draws at once, no simulation
+    state.prelaid = state.nodes.some((n) => n.x != null);
     for (const n of state.nodes) {
       state.byId.set(n.id, n);
       state.adj.set(n.id, new Set());
+      if (state.prelaid && n.x != null) continue;
       const c = CLUSTERS[n.g] || [0, 0];
       const a = rand() * 2 * Math.PI, d = Math.sqrt(rand()) * 160;
       n.x = c[0] + Math.cos(a) * d;
@@ -727,7 +774,9 @@
       const s = order[a], t = order[b];
       state.adj.get(s).add(t);
       state.adj.get(t).add(s);
-      return { source: s, target: t };
+      const l = { source: s, target: t };
+      for (const id of [s, t]) (state.linksOf.get(id) || state.linksOf.set(id, []).get(id)).push(l);
+      return l;
     });
     $("#stat-notes").textContent = state.nodes.length.toLocaleString();
     $("#stat-links").textContent = state.links.length.toLocaleString();
@@ -739,6 +788,14 @@
     applyTheme(D.theme || "dark");
     if (D.setup) D.setup(designApi());
     bindUI();
+    if (state.prelaid) {
+      // Draw the shipped layout as-is, then restore normal physics for filters and local view
+      G.warmupTicks(0).cooldownTicks(0);
+      G.onEngineStop(() => {
+        G.warmupTicks(160).cooldownTicks(Infinity).onEngineStop(onEngineStop);
+        onEngineStop();
+      });
+    }
     syncData();
     fitFocus(0);
     if (currentId()) setTimeout(route, 300);
@@ -752,6 +809,7 @@
     ["#btn-home", "Start here", "Opens the index note, the best place to begin reading."],
   ];
   function startTour() {
+    store.set("tour-start-here", "1");
     const tour = document.createElement("div");
     tour.className = "tour";
     tour.innerHTML =
@@ -849,7 +907,7 @@
       landing.classList.add("is-gone");
       setTimeout(() => landing.remove(), 600);
       document.removeEventListener("keydown", onKey, true);
-      setTimeout(startTour, 650);
+      if (!store.get("tour-start-here")) setTimeout(startTour, 650);
     };
     // Capture keys while open so the graph's own shortcuts don't fire underneath
     const onKey = (e) => {
