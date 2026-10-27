@@ -1,16 +1,19 @@
 # Holy Bible - Obsidian Study Guide
 
-A published, fully interlinked Bible study vault — 1,139 notes covering all 66 canonical books (KJV), plus people, places, events, themes, and timelines. Authored in [Obsidian](https://obsidian.md) and published as a custom, zero-dependency, graph-first static site.
+A published, fully interlinked Bible study vault — 1,139 notes covering all 66 canonical books (KJV), plus people, places, events, themes, and timelines. Authored in [Obsidian](https://obsidian.md) and published as two live sites built from the same notes.
+
+| ✦ Star Graph | ▤ Quartz Wiki |
+| :--- | :--- |
+| **[mktcowboy.github.io/bible-study-guide](https://mktcowboy.github.io/bible-study-guide/)** | **[mktcowboy.github.io/bible-study-guide/quartz](https://mktcowboy.github.io/bible-study-guide/quartz/)** |
+| The whole guide drawn as a night sky; click any star to read the note in a side panel. | The classic wiki layout with a file explorer, hover previews, backlinks and a local graph on every page. |
+
+On both sites, every scripture reference (e.g. "Luke 24:46-49", "Psalm 22") links to that verse or chapter in the KJV source text.
 
 ## Last updated
 
-**October 20, 2026** · 1,139 notes
+**October 26, 2026** · 1,139 notes
 
-Latest changes: replaced Quartz with a custom graph-first site (no Quartz, no dependencies); old Quartz URLs redirect to the new pages. Previously: added the Words of Christ hub (2,029 red-letter sayings), gave the Father, Son, and Holy Spirit their own Holy Trinity folder, and highlighted Christ's words inline in the New Testament KJV source text.
-
-## Live site
-
-https://mktcowboy.github.io/bible-study-guide/
+Latest changes: the Quartz version is back at `/quartz/`, alongside the star graph, and every scripture reference on both sites now links to its verse in the KJV source text. Previously: replaced Quartz with a custom graph-first site, and old Quartz URLs redirect to the new pages. Before that: added the Words of Christ hub (2,029 red-letter sayings), gave the Father, Son, and Holy Spirit their own Holy Trinity folder, and highlighted Christ's words inline in the New Testament KJV source text.
 
 ## Structure
 
@@ -24,8 +27,9 @@ https://mktcowboy.github.io/bible-study-guide/
   - `07 Source Text/` — public-domain KJV source text, one note per book, with the words of Christ in red
   - `08 Timelines/` — canonical, prophetic, New Testament, and intertestamental timelines
 - `app/` — the front end (single-page app: `index.html`, `style.css`, `app.js`, `404.html` redirect)
-- `build.mjs` — build script: reads `content/` and writes the site to `public/`
-- `.github/workflows/deploy.yml` — runs `node build.mjs` and deploys `public/` to GitHub Pages on every push to `main`
+- `build.mjs` — build script: reads `content/` and writes the star-graph site to `public/`
+- `quartz-site/` — the Quartz version (Quartz v4.5.2, MIT, see `quartz-site/LICENSE.txt`). `link-verses.mjs` copies `content/` to `.build/content/`, adding scripture links, before Quartz builds it into `public/quartz/`. The Quartz link crawler is patched so verse links stay out of the graph and backlinks.
+- `.github/workflows/deploy.yml` — builds both sites into `public/` and deploys to GitHub Pages on every push to `main`
 
 ## Develop locally
 
@@ -36,6 +40,16 @@ npx serve public
 ```
 
 Then open the URL `serve` prints (or http://localhost:8080 with Python).
+
+To build the Quartz version too (needs `npm ci` in `quartz-site/` once):
+
+```bash
+cd quartz-site
+node link-verses.mjs
+npx quartz build --directory ../.build/content --output ../public/quartz
+```
+
+It is then served at `/quartz/` alongside the star graph.
 
 ## Updating content
 

@@ -5,5 +5,11 @@ Thumbs.db
 public/
 node_modules/
 
+# Quartz version (quartz-site/): installed deps, cache, and content with verse links added
+quartz-site/node_modules/
+quartz-site/.quartz-cache/
+quartz-site/public/
+.build/
+
 # Obsidian local state, if the content folder is ever opened as a vault
 **/.obsidian/

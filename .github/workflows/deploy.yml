@@ -23,8 +23,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Build site
+      - name: Build graph site
         run: node build.mjs
+      - name: Install Quartz
+        working-directory: quartz-site
+        run: npm ci
+      - name: Build Quartz site into public/quartz
+        working-directory: quartz-site
+        run: |
+          node link-verses.mjs
+          npx quartz build --directory ../.build/content --output ../public/quartz
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
